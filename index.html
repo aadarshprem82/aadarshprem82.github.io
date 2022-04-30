@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body{
+            font-family: Roboto;
+            font-weight: bold;
+        }
+        .logo {
+            float: left;
+            width: 81px;
+        }
+        .ahead {
+            float: left;
+            color: lightcoral;
+            text-align: center;
+            width: 950px;
+        }
+
+        .ap {
+            border-radius: 20px;
+        }
+
+        .som {
+            float: left;
+        }
+        .img{
+            float: left;
+        }
+        .text{
+            font-size: x-large;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            width: 950px;
+        }
+        .name{
+            text-decoration: underline;
+            text-decoration-color: lightcoral;
+            font-family: Roboto;
+            font-weight: 900;
+            width: 950px;
+            text-align: right;
+            float: left;
+            font-size: 70px;
+        }
+        .navi{
+            text-align: center;
+            border-radius: 30px;
+            word-spacing: 10px;
+            padding: 10px;
+            background:lightsalmon;
+            width:1330px;
+            float:left;
+            position: sticky;
+            top: 0px;
+        }
+        button{
+            padding: 5px;
+            background-color: lightcoral;
+            font-size: larger;
+            border-radius: 13px;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: aliceblue;
+        }
+        .bl{
+            font-weight: bolder;
+            color: whitesmoke;
+            background-color: lightcoral;
+        }
+        table{
+            border-style: solid;
+        }
+        td,th{
+            border:2px solid black;
+            padding: 9px;
+            text-align: center;
+            margin: 2px;
+        }
+        .sp{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="som">
+        <div class="logo">
+            <img src="logo.jpg" width="81px" height="50px">
+        </div>
+        <div class="ahead">
+            <h1>About Me</h1>
+        </div>
+        <div class="text">
+            <p>I am a knowledge seeker since my childhood. I always try to reach the best version of myself. I have good knowledge of Python, C++, SQL, and HTML programming languages. And, my habit of gaining knowledge is still going on. I am trying to enhance my Python programming skills and I am also learning PHP programming.
+                Other than my Programming skills, I can draw realistic portraits. I can do many other things at my best level for that, please explore my portfolio.</p>
+        </div>
+        <div class="name">
+            <p>: Aadarsh Prem</p>
+        </div>
+    </div>
+    <div class="img">
+        <img class="ap" src="ap.jpg" width="300px" height="447px">
+    </div>
+    <div class="navi">
+        <nav>
+            <button><a href="#Qual">Qualification</a></button>
+            <button><a href="#proj">Projects</a></button>
+            <button><a href="#sport">Sports</a></button>
+            <button><a href="#extra">Extra-Acts</a></button>
+        </nav>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="Qual" class="cont">
+        <p style="font-size: 80px; background-color: antiquewhite; text-align: center; border-radius: 30px;">Qualifications</p>
+        <table align="center">
+            <thead >
+                <th class="bl">Courses</th>
+                <th>BCA(Bachelor of Computer Application)</th>
+                <th>12th Standard</th>
+                <th>10th Standard</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bl">Percentage</td>
+                    <td>3rd Sem - 80 %</td>
+                    <td>81.2</td>
+                    <td>84.6 %</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="proj" class="proj">
+        <p style="font-size: 80px; background-color: antiquewhite; text-align: center; border-radius: 30px;">Projects</p>
+        <p style="font-size: 40px;text-decoration: underline lightcoral;">Completed Project</p>
+        <p style="font-size: 25px;">Racing Game in Python :</p>
+        <div align="center"><img src="game.jpg" alt="gam" style="border-radius: 10px;"></div>
+        <p style="font-size: 40px;text-decoration: underline lightcoral;">Ongoing Project</p>
+        <p style="font-size: 25px;">Administration Management</p>
+    </div>
+    <div id="sport" class="sport">
+        <p style="font-size: 80px; background-color: antiquewhite; text-align: center; border-radius: 30px;">Sports</p>
+        <p style="font-size:40px;">I am good at,</p>
+        <div align="center">
+            <p style="font-size: 50px;color:orangered;">Cricket</p>
+            <img class="sp" src="crc.jpg">
+        </div>
+        <div align="center">
+            <p style="font-size: 50px;color:orangered;">Volleyball</p>
+            <img class="sp" src="vlb.jpg">
+        </div>
+        <div align="center">
+            <p style="font-size: 50px;color:orangered;">Badminton</p>
+            <img class="sp" src="bad.jpg">
+        </div>
+    </div>
+    <div id="extra" class="proj">
+        <p style="font-size: 80px; background-color: antiquewhite; text-align: center; border-radius: 30px;">Extra-Acts</p>
+        <div align="center"><img class="sp" src="po1.jpg">
+        <p>My School's Principal is handing over the portrait to Deputy CM Manish Sisodia made by me.</p>
+        <img class="sp" src="po.jpg">
+        <p>I can draw decent realistic portraits.</p>
+        </div>
+    </div>
+</body>
+
+</html>
