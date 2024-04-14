@@ -131,8 +131,13 @@
             /* Adjust the translation distance as needed */
         }
 
+        .blurImage{
+            filter: blur(3px);
+        }
         .project {
             flex-direction: column;
+            position: relative;
+            display: inline-block;
         }
 
         .knowMore {
@@ -145,14 +150,25 @@
             position: absolute;
         }
 
+        .scrollContainer {
+            overflow-x: auto;
+            justify-content: flex-start;
+            position: relative;
+        }
+
         .infoOverlay {
-            /* text-align: center;
-            flex-wrap: wrap; */
-            height: 54%;
-            width: 44%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             position: absolute;
+            flex-direction: column;
+            justify-content: center;
             opacity: 0;
             transition: 0.6s;
+        }
+        .infoOverlay h1{
+            color: yellow;
         }
 
         .infoOverlay:hover {
@@ -316,41 +332,78 @@
     <div id="Projects" style="padding-top: 40px; padding-left: 30px; justify-content: flex-start;">
         <span style="padding-left: 15px; font-weight: bolder; font-size: xx-large;">Projects</span>
     </div>
-    <div id="scrollableContainer" style="overflow-x: auto; justify-content: flex-start;">
+    <div id="scrollableContainer" class="scrollContainer">
         <div class="project">
             <img class="projectImage" src="gameScreen.png" alt="DDS_Project">
-            <div >
+            <div class="infoOverlay">
                 <h1>
-                    Ongoing Project
+                    Concept Game
                 </h1>
                 <p>
-                    It is an concept of a highly interactable game which involves good hand-eye coordination.
+                    Stop the circle at perfect angles!
                 </p>
             </div>
-            <!-- <p>Ongoing Project</p> -->
-            <!-- <button class="knowMore">Know More</button> -->
         </div>
         <div class="project" style="padding: 0 20px 0 20px;">
             <img class="projectImage" src="dds.jpg" alt="Python">
+            <div class="infoOverlay">
+                <h1>
+                    HealthGuard: Disease Prediction
+                </h1>
+                <p>
+                    Predicting diseases with cutting-edge technology.(Supervised Learning)
+                </p>
+            </div>
         </div>
         <div class="project">
             <img class="projectImage" src="game.jpg" alt="Python">
+            <div class="infoOverlay">
+                <h1>
+                    Race: 2D
+                </h1>
+                <p>
+                    Zoom through Python's 2D racing world!
+                </p>
+            </div>
         </div>
     </div>
 
     <div style="padding-left: 30px; justify-content: flex-start;">
         <span style="padding-left: 15px; font-weight: bolder; font-size: xx-large;">Sports</span>
     </div>
-    <div id="scrollableContainer" style="overflow-x: auto; justify-content: flex-start;">
+    <div id="scrollableContainer" class="scrollContainer"">
         <div class="project">
-            <img class="projectImage" src="bad.jpg" alt="DDS_Project">
-            <!-- <button class="knowMore">Know More</button> -->
-        </div>
-        <div class="project" style="padding: 0 20px 0 20px;">
-            <img class="projectImage" src="crc.jpg" alt="Python">
+            <img class="projectImage blurImage" src="bad.jpg" alt="DDS_Project">
+            <div class="infoOverlay">
+                <h1>
+                    Badminton
+                </h1>
+                <p>
+                    Mastering the art of shuttlecock supremacy.
+                </p>
+            </div>
         </div>
         <div class="project">
-            <img class="projectImage" src="vlb.jpg" alt="Python">
+            <img class="projectImage blurImage" src="crc.jpg" alt="Python">
+            <div class="infoOverlay">
+                <h1>
+                    Cricket
+                </h1>
+                <p>
+                    Swing, spin, and score - cricket's my game.
+                </p>
+            </div>
+        </div>
+        <div class="project">
+            <img class="projectImage blurImage" src="vlb.jpg" alt="Python">
+            <div class="infoOverlay">
+                <h1>
+                    Volleyball
+                </h1>
+                <p>
+                    Spike, set, and serve - dominating the court.
+                </p>
+            </div>
         </div>
     </div>
 
