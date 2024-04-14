@@ -26,11 +26,11 @@
             color: snow;
             font-weight: bold;
             text-decoration: none;
-            transition: 0.2s;
+            transition: 0.5s;
         }
 
         span {
-            transition: 0.2s;
+            transition: 0.5s;
         }
 
         span:hover,
@@ -38,9 +38,9 @@
             cursor: url('smallCursorRight.png'), auto;
             /* background-image: radial-gradient(white, rgb(239, 149, 149)); */
             color: salmon;
-            font-size: larger;
+            /* font-size: larger; */
             /*font-weight: bolder;*/
-            transition: 0.2s;
+            transition: 0.5s;
         }
 
         img:hover {
@@ -187,6 +187,11 @@
             background-color: #faee56;
         }
 
+        .titleHead {
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+
         #scrollableContainer::-webkit-scrollbar {
             display: none;
         }
@@ -214,7 +219,7 @@
                 </span>
             </div>
             <div>
-                <span style="padding: 0px 25px 0px 25px; font-weight: bolder; font-size: xxx-large; color: darksalmon;">
+                <span class="titleHead" style="padding: 0px 25px 0px 25px; font-size: xxx-large; color: darksalmon;">
                     -Aadarsh Prem
                 </span>
             </div>
@@ -294,23 +299,24 @@
     </div>
     <div class="navigation">
         <!-- <nav> -->
-        <a href="#QualficationMain">Qualification</a>
+        <a href="#QualificationMain">Qualification</a>
         <a href="#AboutMe">AboutMe</a>
         <a href="#ExperienceMain">Experience</a>
         <a href="#Projects">Projects</a>
         <!-- </nav> -->
     </div>
     <div id="QualificationMain">
-        <div>
-            <span style="font-weight: bolder; font-size: xx-large;">Highest Education</span>
+        <div style="padding-top: 2.5em;">
+            <span class="titleHead">Highest Education</span>
         </div>
         <div style="align-self: center;">
-            <div style="background-color: rgb(44, 172, 46); width: 100px; height: 100px; border-radius: 50%; overflow: hidden; position: relative;">
+            <div
+                style="background-color: rgb(44, 172, 46); width: 100px; height: 100px; border-radius: 50%; overflow: hidden; position: relative;">
                 <div class="pie"></div>
-                <span style="font-family: monospace; font-size: xx-large; font-weight: bolder; padding-top: 30px;">91%</span>
+                <span class="titleHead" style="font-family: monospace; padding-top: 30px;">91%</span>
             </div>
             <div style="flex-direction: column;">
-                <span style="font-weight: bolder; font-size: 20px;">Bachelors of Computer Application(
+                <span class="titleHead" style="font-size: 20px;">Bachelors of Computer Application(
                     <span style="font-weight: bold; font-size: 15px; color: gold;">BCA</span> )
                 </span>
                 <span>Guru Gobind Singh Indraprastha University</span>
@@ -318,13 +324,14 @@
             </div>
         </div>
     </div>
-    <div id="ExperienceMain" style=" padding-top: 35px; flex-direction: column; align-items: flex-start;">
+    <div id="ExperienceMain" style=" padding-top: 2.5em; flex-direction: column; align-items: flex-start;">
         <div style="justify-content: flex-start;">
             <span style="padding-left:15px ; font-weight: bolder; font-size: xx-large;">Experience</span>
         </div>
         <div style="align-self: center;">
             <div style="flex-direction: column;">
-                <span>Gamix Labs</span>
+                <img style="height: 7em;" src="GamixLabs.gif" alt="Gamix Labs Logo" title="www.gamixlabs.com">
+                <span style="font-weight: bolder; position: absolute; padding-top: 4.5em;">Gamix Labs</span>
                 <span>-Game Developer Trainee</span>
             </div>
             <div>
@@ -341,7 +348,7 @@
         </div>
     </div>
 
-    <div id="Projects" style="padding-top: 40px; padding-left: 30px; justify-content: flex-start;">
+    <div id="Projects" style="padding-top: 2.5em; padding-left: 30px; justify-content: flex-start;">
         <span style="padding-left: 15px; font-weight: bolder; font-size: xx-large;">Projects</span>
     </div>
     <div id="scrollableContainer" class="scrollContainer">
@@ -381,42 +388,42 @@
     </div>
 
     <div style="padding-left: 30px; justify-content: flex-start;">
-        <span style="padding-left: 15px; font-weight: bolder; font-size: xx-large;">Sports</span>
+        <span class="titleHead">Sports</span>
     </div>
     <div id="scrollableContainer" class="scrollContainer">
         <div class=" project">
-        <img class="projectImage blurImage" src="bad.jpg" alt="DDS_Project" >
-        <div class="infoOverlay" title="Rio 2016">
-            <h1>
-                Badminton
-            </h1>
-            <p>
-                Mastering the art of shuttlecock supremacy.
-            </p>
+            <img class="projectImage blurImage" src="bad.jpg" alt="DDS_Project">
+            <div class="infoOverlay" title="Rio 2016">
+                <h1>
+                    Badminton
+                </h1>
+                <p>
+                    Mastering the art of shuttlecock supremacy.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="project">
-        <img class="projectImage blurImage" src="crc.jpg" alt="Python">
-        <div class="infoOverlay" title="IPL 2022">
-            <h1>
-                Cricket
-            </h1>
-            <p>
-                Swing, spin, and score - cricket's my game.
-            </p>
+        <div class="project">
+            <img class="projectImage blurImage" src="crc.jpg" alt="Python">
+            <div class="infoOverlay" title="IPL 2022">
+                <h1>
+                    Cricket
+                </h1>
+                <p>
+                    Swing, spin, and score - cricket's my game.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="project">
-        <img class="projectImage blurImage" src="vlb.jpg" alt="Python">
-        <div class="infoOverlay" title="Olympics ">
-            <h1>
-                Volleyball
-            </h1>
-            <p>
-                Spike, set, and serve - dominating the court.
-            </p>
+        <div class="project">
+            <img class="projectImage blurImage" src="vlb.jpg" alt="Python">
+            <div class="infoOverlay" title="Olympics ">
+                <h1>
+                    Volleyball
+                </h1>
+                <p>
+                    Spike, set, and serve - dominating the court.
+                </p>
+            </div>
         </div>
-    </div>
     </div>
 
     <script>
@@ -494,7 +501,7 @@
                 ChangeStyle(text, "white", "normal", 1);
             }
             for (var i = 0; i < arrows.length; i++) {
-                arrows[i].src = index == i ? "arrowGreen.png" : "arrowCopy.png";
+                arrows[i].src = index == i ? "arrowCyan.png" : "arrowCopy.png";
             }
             index++;
             if (index > arrows.length - 1) {
