@@ -131,9 +131,10 @@
             /* Adjust the translation distance as needed */
         }
 
-        .blurImage{
+        .blurImage {
             filter: blur(3px);
         }
+
         .project {
             flex-direction: column;
             position: relative;
@@ -167,13 +168,23 @@
             opacity: 0;
             transition: 0.6s;
         }
-        .infoOverlay h1{
+
+        .infoOverlay h1 {
             color: yellow;
         }
 
         .infoOverlay:hover {
             cursor: url('smallCursorRight.png'), auto;
             opacity: 0.7;
+        }
+
+        .pie {
+            width: 96px;
+            height: 101px;
+            clip-path: polygon(48% 46%, 100% 100%, 63% 100%);
+            transform: rotate(-112deg);
+            position: absolute;
+            background-color: #faee56;
         }
 
         #scrollableContainer::-webkit-scrollbar {
@@ -294,8 +305,9 @@
             <span style="font-weight: bolder; font-size: xx-large;">Highest Education</span>
         </div>
         <div style="align-self: center;">
-            <div style="background-color: rgb(44, 172, 46); width: 100px; height: 100px; border-radius: 50%;">
-                <span style="font-family: monospace; font-size: xx-large; font-weight: bolder;">91%</span>
+            <div style="background-color: rgb(44, 172, 46); width: 100px; height: 100px; border-radius: 50%; overflow: hidden; position: relative;">
+                <div class="pie"></div>
+                <span style="font-family: monospace; font-size: xx-large; font-weight: bolder; padding-top: 30px;">91%</span>
             </div>
             <div style="flex-direction: column;">
                 <span style="font-weight: bolder; font-size: 20px;">Bachelors of Computer Application(
@@ -371,40 +383,40 @@
     <div style="padding-left: 30px; justify-content: flex-start;">
         <span style="padding-left: 15px; font-weight: bolder; font-size: xx-large;">Sports</span>
     </div>
-    <div id="scrollableContainer" class="scrollContainer"">
-        <div class="project">
-            <img class="projectImage blurImage" src="bad.jpg" alt="DDS_Project">
-            <div class="infoOverlay">
-                <h1>
-                    Badminton
-                </h1>
-                <p>
-                    Mastering the art of shuttlecock supremacy.
-                </p>
-            </div>
+    <div id="scrollableContainer" class="scrollContainer">
+        <div class=" project">
+        <img class="projectImage blurImage" src="bad.jpg" alt="DDS_Project" >
+        <div class="infoOverlay" title="Rio 2016">
+            <h1>
+                Badminton
+            </h1>
+            <p>
+                Mastering the art of shuttlecock supremacy.
+            </p>
         </div>
-        <div class="project">
-            <img class="projectImage blurImage" src="crc.jpg" alt="Python">
-            <div class="infoOverlay">
-                <h1>
-                    Cricket
-                </h1>
-                <p>
-                    Swing, spin, and score - cricket's my game.
-                </p>
-            </div>
+    </div>
+    <div class="project">
+        <img class="projectImage blurImage" src="crc.jpg" alt="Python">
+        <div class="infoOverlay" title="IPL 2022">
+            <h1>
+                Cricket
+            </h1>
+            <p>
+                Swing, spin, and score - cricket's my game.
+            </p>
         </div>
-        <div class="project">
-            <img class="projectImage blurImage" src="vlb.jpg" alt="Python">
-            <div class="infoOverlay">
-                <h1>
-                    Volleyball
-                </h1>
-                <p>
-                    Spike, set, and serve - dominating the court.
-                </p>
-            </div>
+    </div>
+    <div class="project">
+        <img class="projectImage blurImage" src="vlb.jpg" alt="Python">
+        <div class="infoOverlay" title="Olympics ">
+            <h1>
+                Volleyball
+            </h1>
+            <p>
+                Spike, set, and serve - dominating the court.
+            </p>
         </div>
+    </div>
     </div>
 
     <script>
