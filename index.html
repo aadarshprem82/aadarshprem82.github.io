@@ -330,6 +330,24 @@
         </div>
         <div style="align-self: center;">
             <div style="flex-direction: column;">
+                <img style="height: 7em; scale:0.55" src="Wipro.png" alt="Wipro Logo" title="www.wipro.com">
+                <span style="font-weight: bolder; position: absolute; padding-top: 4.5em;">Wipro Limited</span>
+                <span>-Developer L1</span>
+            </div>
+            <div>
+                <span>June, 2024</span>
+                <div style="padding: 0px 5px 0px 0px;">
+                    <img class="arrow" src="arrow.png" alt="">
+                    <img class="arrow" src="arrow.png" alt="">
+                    <img class="arrow" src="arrow.png" alt="">
+                    <img class="arrow" src="arrow.png" alt="">
+                    <img class="arrow" src="arrow.png" alt="">
+                </div>
+                <span id="present" style="z-index: 999;">Present</span>
+            </div>
+        </div>
+        <div style="align-self: center;">
+            <div style="flex-direction: column;">
                 <img style="height: 7em;" src="GamixLabs.gif" alt="Gamix Labs Logo" title="www.gamixlabs.com">
                 <span style="font-weight: bolder; position: absolute; padding-top: 4.5em;">Gamix Labs</span>
                 <span>-Game Developer Trainee</span>
@@ -341,9 +359,9 @@
                     <img class="arrow" src="arrow.png" alt="">
                     <img class="arrow" src="arrow.png" alt="">
                     <img class="arrow" src="arrow.png" alt="">
-                    <img class="arrow" src="arrow.png" alt="">
+                    <img class="arrow" src="arrowCopy.png" alt="">
                 </div>
-                <span id="present" style="z-index: 999;">Present</span>
+                <span id="present" style="z-index: 999;">May, 2024</span>
             </div>
         </div>
     </div>
@@ -500,11 +518,11 @@
             if (index == 0) {
                 ChangeStyle(text, "white", "normal", 1);
             }
-            for (var i = 0; i < arrows.length; i++) {
+            for (var i = 0; i < arrows.length/2; i++) {
                 arrows[i].src = index == i ? "arrowCyan.png" : "arrowCopy.png";
             }
             index++;
-            if (index > arrows.length - 1) {
+            if (index > (arrows.length/2) - 1) {
                 ChangeStyle(text, "lightgreen", "bolder", 1.1);
                 clearInterval(changeImageInterval)
                 setTimeout(() => {
