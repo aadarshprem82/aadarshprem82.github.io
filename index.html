@@ -6,6 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
+        /* responsive */
+
+
+        /* Small devices (phones, 600px and below) */
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            div {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .content {
+                text-align: center;
+                padding: 0px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .projectImage {
+                height: 200px;
+            }
+
+            .titleHead {
+                font-size: large;
+            }
+
+            .skill {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            a {
+                font-size: medium;
+                padding: 5px;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and below) */
+        @media only screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .projectImage {
+                height: 250px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            div {
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+            }
+
+            .titleHead {
+                font-size: xx-large;
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+            }
+
+            .skill {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .skill img {
+                width: 50px;
+                height: auto;
+            }
+
+            a {
+                font-size: large;
+                padding: 10px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 1024px and above) */
+        @media only screen and (min-width: 1024px) {
+            body {
+                font-size: 18px;
+            }
+
+            div {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            img {
+                width: 400px;
+                height: 250px;
+            }
+
+            .titleHead {
+                font-size: xxx-large;
+            }
+
+            .skill img {
+                width: 80px;
+                height: auto;
+            }
+        }
+
+
+
+        /* responsive */
+
+
         body {
             cursor: url('smallCursor.png'), auto;
         }
@@ -201,10 +329,49 @@
             flex-direction: column;
             align-items: flex-start;
         }
+
+        .popUp {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            pointer-events: auto;
+        }
+
+        .popUpContent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* .closeButton {
+            color: red;
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        } */
     </style>
 </head>
 
 <body>
+    <div id="smallDevicePopup" class="popUp">
+        <div class="popUpContent">
+            <!-- <span class="closeButton" onclick="closePopup()">&times;</span> -->
+            <p style="color: black;">Welcome to the mobile version of my website! Sorry it’s not optimized—I'm a bit too busy to tackle that right now. Enjoy the adventure over desktop!
+            </p>
+        </div>
+    </div>
     <div id="AboutMe" class="start">
         <img width="400px" height="250px" src="aadarshPrem3.png" alt="Aadarsh Prem"
             style="border-radius: 10px 0px 0px 0px;">
@@ -490,6 +657,8 @@
         var text = document.getElementById("present")
         var index = 0;
         var changeImageInterval;
+
+        //needsToBeChecked
         // var targetDiv = document.getElementById("ExperienceMain");
 
         // var options = {
@@ -519,13 +688,17 @@
             if (index == 0) {
                 ChangeStyle(text, "white", "normal", 1);
             }
-            for (var i = 0; i < arrows.length/2; i++) {
+            for (var i = 0; i < arrows.length / 2; i++) {
+                arrows[i].style.transform = index == i ? 'scale(3)' : 'scale(1)';
                 arrows[i].src = index == i ? "arrowCyan.png" : "arrowCopy.png";
             }
             index++;
-            if (index > (arrows.length/2) - 1) {
+            if (index > (arrows.length / 2) - 1) {
                 ChangeStyle(text, "lightgreen", "bolder", 1.1);
                 clearInterval(changeImageInterval)
+                for (var i = 0; i < arrows.length / 2; i++) {
+                    arrows[i].style.transform = 'scale(1)';
+                }
                 setTimeout(() => {
                     Reset();
                 }, 700);
@@ -580,6 +753,21 @@
         gtag('js', new Date());
 
         gtag('config', 'G-JGNBG5G1MW');
+    </script>
+    <!-- For Small devices popUp -->
+    <script>
+        function showPopup() {
+            var width = window.innerWidth;
+            if (width < 768) {
+                document.getElementById("smallDevicePopup").style.display = "block";
+            }
+        }
+
+        // function closePopup() {
+        //     document.getElementById("smallDevicePopup").style.display = "none";
+        // }
+
+        window.onload = showPopup;
     </script>
 </body>
 
