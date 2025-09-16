@@ -138,6 +138,7 @@ function showPopup() {
     var width = window.innerWidth;
     if (width < 768) {
         document.getElementById("smallDevicePopup").style.display = "block";
+        document.body.classList.add('popUpOpen');
     }
 }
 
