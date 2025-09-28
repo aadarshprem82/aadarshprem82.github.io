@@ -1,4 +1,4 @@
-
+const ENABLE_ARROW_SCALING = false;
 setTimeout(function () {
     var container = document.getElementById("scrollableContainer");
     var scrollDistance = 200; // Adjust the scroll distance as needed
@@ -75,15 +75,19 @@ function ChangeImages() {
         ChangeStyle(text, "white", "normal", 1);
     }
     for (var i = 0; i < arrows.length / 2; i++) {
-        arrows[i].style.transform = index == i ? 'scale(3)' : 'scale(1)';
-        arrows[i].src = index == i ? "arrowCyan.png" : "arrowCopy.png";
+        if (ENABLE_ARROW_SCALING){
+            arrows[i].style.transform = index == i ? 'scale(3)' : 'scale(1)';
+        }
+        arrows[i].src = index == i ? "arrowCopy.png" : "arrow.png";
     }
     index++;
     if (index > (arrows.length / 2) - 1) {
         ChangeStyle(text, "lightgreen", "bolder", 1.1);
         clearInterval(changeImageInterval)
-        for (var i = 0; i < arrows.length / 2; i++) {
-            arrows[i].style.transform = 'scale(1)';
+        if (ENABLE_ARROW_SCALING){
+            for (var i = 0; i < arrows.length / 2; i++) {
+                arrows[i].style.transform = 'scale(1)';
+            }
         }
         setTimeout(() => {
             Reset();
@@ -101,7 +105,7 @@ function ChangeStyle(object, color, weight, scale = 1) {
 }
 function Reset() {
     // console.log("ResetCalled!!");
-    changeImageInterval = setInterval(ChangeImages, 150);
+    changeImageInterval = setInterval(ChangeImages, 300);
 }
 Reset();
 
